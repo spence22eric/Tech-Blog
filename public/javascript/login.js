@@ -16,6 +16,7 @@ async function loginFormHandler(event) {
   
       if (response.ok) {
         document.location.replace('/dashboard/');
+        alert('logged in!')
       } else {
         alert(response.statusText);
       }
@@ -46,7 +47,6 @@ async function loginFormHandler(event) {
     }
   }
   
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-  
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);  
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
   
